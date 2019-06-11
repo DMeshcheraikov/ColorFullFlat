@@ -1,0 +1,156 @@
+// ============================
+// RESETS
+// ============================
+table, thead, tbody, tfoot, tr, th, td 
+	margin: 0
+	padding: 0
+	border: none
+	border-collapse: inherit
+	border-spacing: 0
+	border-color: inherit
+	vertical-align: inherit
+	font-weight: inherit
+	-webkit-border-horizontal-spacing: 0
+	-webkit-border-vertical-spacing: 0 
+
+*, *:before, *:after
+	margin: 0
+	padding: 0 
+
+input 
+	border-radius: 0
+	// box-shadow: none !important 
+
+ul, ol 
+	list-style-type: none 
+
+a 
+	text-decoration: none
+	cursor: pointer 
+h2
+	font-size: 60px
+	text-transform: uppercase
+	text-align: center
+	padding-top: 95px
+	font-family: "Carton"
+
+html 
+	-webkit-text-size-adjust: 100%
+	font-size: 20px
+	font:
+		family: "Myriad Pro"
+		weight: normal
+	width: 100wh
+
+input:focus,
+label:focus,
+textarea:focus,
+select:focus,
+option:focus,
+button:focus,
+a:focus 
+	outline: none 
+
+*, *:before, *:after, input, textarea, button, select 
+	box-sizing: border-box 
+
+.slick-slide
+  &:focus, a 
+    outline: none
+
+
+.slick-dots li button
+	border: 2px solid white
+	border-radius: 50%
+	margin-right: 5px
+	margin-left: 5px
+	background: transparent
+	width: 25px
+	height: 25px
+	font-size: 0
+	&:hover, &:focus,
+		background: white
+.slick
+	&-arrow
+		position: absolute
+		top: 50%
+		transform: translate(0, -50%)
+		font-size: 0
+		z-index: 10
+		border: transparent
+		background-color: transparent
+		&:before
+			@include flex($jc: center, $ai: center)
+			width: 1em
+			height: 1em
+			font-family: "Font Awesome 5 Free"
+			font-weight: 600
+			font-size: 2.5rem
+			background-color: transparent
+	&-prev
+		left: 0
+		color: $mainC1
+		&:before
+			content: '\f0a8'
+	&-next
+		right: 0
+		color: $mainC1
+		&:before
+			content: '\f0a9'
+	&-dots
+		@include flex($jc: center)
+		bottom: 0
+		left: 50%
+		margin-right: -50%
+		transform: translate(-50%, -50%)
+		position: absolute
+		bottom: -60px
+
+
+.button
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 9.2rem
+	height: 4.2rem
+	border: solid transparent
+		radius: 12px
+	font-size: 1.1rem
+	cursor: pointer
+	font-weight: bold
+	color: $mainC1
+	transition: .4s
+	&:hover
+		box-shadow: inset 0 0 0 .5px rgba($mainC2, .8)
+		background: $mainC2 
+		opacity: .8
+	&_theme
+		&_blue
+			background: #a5d3db
+		&_green
+			background: #9ad4a6
+
+// ============================
+// FONTS
+// ============================
+
+@font-face 
+	font:	
+		family: "Myriad Pro"
+		weight: normal
+		style: normal
+	src: url("../fonts/Myriad Pro-Regular.ttf") format("truetype")
+
+@font-face 
+	font:	
+		family: "Myriad Pro"
+		weight: bold
+		style: normal
+	src: url("../fonts/Myriad Pro-Bold.ttf") format("truetype")
+
+@font-face 
+	font:	
+		family: "Carton"
+		weight: normal
+		style: normal
+	src: url("../fonts/Carton.otf") format("opentype")

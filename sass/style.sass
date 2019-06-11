@@ -1,0 +1,333 @@
+@import "./_options"
+@import "./_default"
+
+// ============================
+// MAIN CODE START
+// ============================
+
+.container
+	width: 1230px
+	max-width: nth($mediaBp, 1)
+	padding-left: 10px
+	padding-right: 10px
+	margin-left: auto
+	margin-right: auto
+
+.header
+	&-grid
+		@include flex($jc: space-between)
+	padding-top: 60px
+	width: 100%
+	background: url(../img/bg2.jpg)
+	height: 125px
+	&-icon
+		font-size: 26px
+		padding-right: 19px
+	&-logo
+		font:
+			family: Carton
+			weight: normal
+			size: 32px
+		text-transform: uppercase
+		
+
+.nav
+	&-list
+		display: flex
+		font-weight: bold
+		font-size: 22px
+		li + li
+			padding-left: 75px
+
+.pres
+	&-block
+		background: url(../img/bg2.jpg)
+		height: 575px
+	&-grid
+		&__col
+			height: 490px	
+			position: relative
+			display: inline-block
+	&-title
+		max-width: 550px
+		text-align: center
+		padding-top: 120px
+		padding-right: 70px
+		color: white
+		letter-spacing: 3px
+	&-img
+		position: absolute
+		top: 75px
+		right: 125px
+
+.services
+	&-block
+	&-grid
+		height: 520px
+		@include flex($jc: space-between, $ai: center)
+	&-items
+		margin: 0 auto
+		max-width: 330px
+		width: 100%
+		@include flex($fd: column, $jc: center, $ai: center)
+		&__img
+			max-width: 200px
+		&__text
+			text-align: center
+		&__title
+			padding: 35px 0
+
+.strike
+	height: 0
+	width: 100%
+	border: solid 1px $mainC2
+
+.information
+	&-block
+		padding: 100px 0 115px 0
+		.container
+
+	&-grid
+		@include flex($ai:center, $jc: space-between)
+		width: 100%
+		&__col
+			height: 13.25em
+			&:first-child
+				padding-right: 75px
+	&-items
+		height: inherit
+		position: relative
+		width: 100%
+		&__title
+			position: relative
+			top: 0
+			font-size: 32px
+			font-family: "Myriad Pro"
+			font-weight: bold
+		&__img
+			width: 17.5em
+			height: 13.25em
+		&__text
+			font-size: 24px
+			color: #515151
+			padding-top: 30px
+			display: flex
+			justify-content: center
+			align-items: center
+		&__btn
+			position: absolute
+			bottom: 0
+.contact
+	&-block
+		background: #3c3d3d
+		color: $mainC2
+	&__text
+		max-width: 26.75em
+		text-align: center
+		margin: 0 auto
+		padding-top: 30px
+	&-form
+		@include flex($fd: column)
+		margin: 0 auto
+		margin-top: 5.75rem
+		width: 38.2rem
+		text-overflow: ellipsis
+		font-size: 1.45em
+		input[placeholder], textarea[placeholder]
+			font-size: 1.45em
+			padding-left: 25px
+			padding-right: 15px
+			&:focus
+				text-indent: 20px;
+				transition: text-indent 0.5s ease
+		textarea[placeholder]	
+			padding-top: 15px
+		&__text			
+			height: 4.25rem
+			width: 100%
+			border: solid 1px
+				radius: 10px
+			margin-bottom: 1.6em
+		&__area
+			width: 100%
+			height: 10.75rem
+			border: solid 1px
+				radius: 10px
+			margin-bottom: 60px
+		&__btn
+			margin: 0 auto
+			margin-bottom: 100px
+			background: #fff
+
+.mot
+	&-block
+		background: url(../img/bg1.jpg)
+	&__title
+		color: #fff
+	&__text
+		text-align: center
+		max-width: 27em
+		padding-top: 1em
+		margin: 0 auto
+		color: #fff
+		opacity: .5
+		font-size: 0.95em
+	&-grid
+		@include flex($jc: space-between)
+		padding-bottom: 6.25em
+		padding-top: 6em
+		&__col
+			width: 17.3em
+	&-items
+		@include flex($ai: center, $jc: center, $fd: column)
+		padding-bottom: 1.25em
+		background: white
+		margin: 0 auto
+		max-width: 16.5em
+		&__img
+			width: 100%
+			height: 11.75em
+		&__person
+			font-size: 1.85em
+			text-transform: uppercase
+			font-family: "Carton"
+			padding-top: 1.25em
+			text-align: center
+		&__prof
+			padding-top: 1.15em
+			font-size: 1.15em
+			font-weight: bold
+			text-align: center
+		&__text
+			padding-top: 1.15em
+			font-size: 1.1em
+			text-align: center
+			color: $mainC2
+		&-sl
+			padding-top: 1.25em
+			@include flex
+			&__link
+				@include flex($jc: center, $ai: center)
+				width: 1.5em
+				height: 1.5em
+				border: 10px solid #525252
+					radius: 50%
+				color: white
+				flex-shrink: 0
+				margin-right: 15px
+				background: #525252
+				font-size: 28px
+				margin-top: 4px
+				&:nth-child(1)
+					background: #2940a4
+					border: #2940a4
+				&:nth-child(2)
+					background: #24a8fc
+					border: #24a8fc
+			&__linkp
+				font-size: 43px
+				color: red
+
+.blog
+	&-block
+		background: url(../img/bg2.jpg)
+		padding-bottom: 5em
+	&__title
+		color: #fff
+	&__text
+		text-align: center
+		max-width: 27em
+		margin: 0 auto
+		padding-top: 1.15em
+		color: #fff
+		opacity: .6
+	&-grid
+		@include flex ($fw: wrap)
+		margin: 0 auto
+		&__col
+			width: 19.5em
+			padding: 20px
+		padding: 5em 0 4em 0
+	&-items
+		width: 19.5em
+		margin: 0 auto
+		background: #fff
+		padding-bottom: 1.8em
+		@include flex($fd: column, $jc: center, $ai: center)
+		&__img
+			width: 19.5em
+		&__title
+			text-align: center
+			font:
+				size: 1.56em
+				weight: bold
+			padding-top: 1.5em
+		&__date
+			text-align: center
+			font-style: italic
+			line-height: 2.64em
+		&__text
+			width: 80%
+			text-align: center
+			font-size: 0.93em
+			color: $mainC2
+
+.show-more
+	color: #b4d3e0
+	background: #fff
+	position: relative
+	margin: 0 auto
+	@media (max-width: 1275px)
+		display: none
+
+.footer
+	background: #3c3d3d
+	.container
+		position: relative
+		height: 155px
+		.strike
+			position: absolute
+			top: 0
+			height: 0
+			width: 100%
+			border: solid 1px black
+		@include flex($jc: space-between, $ai: center)
+	&__rights
+		font-size: 23px
+		span
+			color: #e2c483
+		space
+			padding: 0 15px
+
+.social-link
+	@include flex($jc: space-between)
+	&__item
+		padding-right: 5px
+		color: $mainC1
+		position: relative
+		img
+			width: 1.5em
+		&__icon
+			@include flex($jc: center, $ai: center)
+			width: 1.5em
+			height: 1.5em
+			border: 10px solid #525252
+				radius: 50%
+			color: #3c3c3d
+			flex-shrink: 0
+			margin-right: 20px
+			background: #525252
+			font-size: 35px
+
+// ============================
+// MAIN CODE END
+// ============================
+
+@for $i from 1 to length($mediaBp)
+	@media (max-width: nth($mediaBp, $i))
+		.container
+			max-width: nth($mediaBp, $i + 1)
+
+// ============================
+// MEDIA QUARIES
+// ============================
